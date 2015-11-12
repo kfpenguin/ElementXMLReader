@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <HotListEditTemplatePage>
+	<Other>
+		<TemplateTitle by="id" id="hotlist_template_title"></TemplateTitle>
+		<DeleteTemplate by="id" id="btnDeleteTemplate"></DeleteTemplate>
+	</Other>
+    <DeleteConfirmation>
+      <DeleteYes by="id" id="delete_template_yes"></DeleteYes>
+      <DeleteNo by="id" id="delete_template_no"></DeleteNo>
+    </DeleteConfirmation>
+  </HotListEditTemplatePage>
+  <HotListReportResultsPage>
+    <Breadcrumb>
+      <Home by="cssselector" cssselector=".breadcrumb>ul>li:nth-child(1)"></Home>
+      <RunReport by="cssselector" cssselector=".breadcrumb>ul>li:nth-child(3)"></RunReport>
+      <ReportTitle by="cssselector" cssselector=".breadcrumb>ul>li:nth-child(5)"></ReportTitle>
+    </Breadcrumb>
+    <ReportGrid>
+      <MenuBar>
+        <ReportCriteria by="id" id="btnReportCriteria"></ReportCriteria>
+        <UserPreferences by="id" id="btnUserPreferences"></UserPreferences>
+        <Graph by="id" id="iconGraph"></Graph>
+        <ExcelExport by="id" id="iconExcelExport"></ExcelExport>
+        <Print by="id" id="iconPrint"></Print>
+      </MenuBar>
+	  <TemplateCriteriaGrid>
+          <Column field="Ref" data-title="Ref" data-field="criteriaId"></Column>
+          <Column field="Location" data-title="Loc" data-field="location"></Column>
+          <Column field="Source" data-title="Source" data-field="source"></Column>
+          <Column field="LOSDays" data-title="LOS (Days)" data-field="lengthOfStayOperator"></Column>
+          <Column field="LOS" data-title="LoS" data-field="lengthOfStay"></Column>
+          <Column field="Organism" data-title="Org" data-field="organism"></Column>
+          <Column field="Drug" data-title="Drug" data-field="drug"></Column>
+          <Column field="Susc" data-title="Sens" data-field="sensitivity"></Column>
+          <Column field="Results" data-title="Results" data-field="total"></Column>
+          <HotListTemplateCriteriaWindow by="id" id="HotListTemplateCriteriaWindow"></HotListTemplateCriteriaWindow>
+          <CriteriaWindow by="cssselector" cssselector=".k-widget.k-window"></CriteriaWindow>
+        </TemplateCriteriaGrid>
+      <KendoGrid>
+        <Column field="Site" data-title="Site" data-field="ShortSiteName"></Column>
+        <Column field="CollectedLoc" data-title="Collected Loc" data-field="Location"></Column>
+        <Column field="LastLoc" data-title="Last Loc" data-field="LastLocation"></Column>
+        <Column field="LastDate" data-title="Last Date" data-field="LastDate"></Column>
+        <Column field="MRN" data-title="MR#" data-field="MRN"></Column>
+        <Column field="PatientName" data-title="Patient Name" data-field="PatientName"></Column>
+        <Column field="Age" data-title="Age" data-field="Age"></Column>
+        <Column field="AdmittedOn" data-title="Admitted On" data-field="EncounterDate"></Column>
+        <Column field="CollectedOn" data-title="Collected On" data-field="DateCollected"></Column>
+        <Column field="LOS" data-title="LOS" data-field="LengthOfStay"></Column>
+        <Column field="Source" data-title="Source" data-field="Source"></Column>
+        <Column field="Organism" data-title="Organism" data-field="Organism"></Column>
+        <Column field="NIM" data-title="NIM" data-field="EventForm.Nim_final_id"></Column>
+        <Column field="Form" data-title="Form" data-field="EventForm"></Column>
+        <Column field="Doctor" data-title="Doctor" data-field="Doctor"></Column>
+        <Column field="Ref" data-title="Ref" data-field="HotListId"></Column>
+        <Column field="MessageId" data-title="Message Id" data-field="MessageId"></Column>
+        <Column field="Susceptibility" data-title="Susceptibility" data-field="SusceptibilityColumn"></Column>
+        <Column field="Observations" data-title="Observations" data-field="Org"></Column>
+        <Column field="AccountNum" data-title="Account Num" data-field="AccountNumColumn"></Column>
+        <Column field="AccessionNumber" data-title="Accession Number" data-field="Specimen"></Column>
+        <HotListReportGrid by="id" id="HotListReportGrid"></HotListReportGrid> 
+        <FilterApplyButton by="cssselector" cssselector=".k-button[type='submit']"></FilterApplyButton>
+        <FilterClearButton by="cssselector" cssselector=".k-button[type='reset']"></FilterClearButton>
+        <Tooltip by="id" id="tooltip-####"></Tooltip>
+      </KendoGrid>
+    </ReportGrid>
+  </HotListReportResultsPage>
+  <HotListRunReportPage>
+	<Window>
+		<IFrame by="cssselector" cssselector="#modalmenu iframe"></IFrame>
+		<WindowTitle by="id" id="modalmenu_wnd_title"></WindowTitle>
+		<NoMatches by="id" id="nomatch"></NoMatches>
+	</Window>
+    <ReportSection>
+      <ReportSectionDiv by="id" id="dvRun_ReportSection"></ReportSectionDiv>     
+      <ReportTemplate by="cssselector" cssselector="div.dvRun_dropdownlist span[aria-owns='ReportTemplates_listbox']"></ReportTemplate>
+      <ListAllTemplates by="id" id="AllTemplates"></ListAllTemplates>
+      <MultiSelectSites string="#MultiSelectSites"></MultiSelectSites>
+    </ReportSection>
+    <CommonSection>
+		<CriteriaGrid>
+			<Column field="Location" data-title="Location" data-field="location"></Column>
+			<Column field="Source" data-title="Source" data-field="source"></Column>
+			<Column field="LOS" data-title="LOS" data-field="length_of_stay"></Column>
+			<Column field="Organism" data-title="Organism" data-field="organism"></Column>
+			<Column field="Drug" data-title="Drug" data-field="drug"></Column>
+			<Column field="Susc" data-title="Susc" data-field="sensitivity"></Column>
+			<TemplateCriteriaGrid by="id" id="TemplateCriteriaGrid"></TemplateCriteriaGrid>
+        </CriteriaGrid>
+		<Other>
+		  <CommonSectionDiv by="id" id="dvRun_CommonSection"></CommonSectionDiv>
+		  <TimeFrame by="cssselector" cssselector="div.dvRun_dropdownlist span[aria-owns='ReportTimeFrame_listbox']"></TimeFrame>
+		  <RunDates by="id" id="dvRun_Dates"></RunDates>
+		  <CollectedRadioBtn by="cssselector" cssselector="input[value='collected']"></CollectedRadioBtn>
+		  <FinaledRadioBtn by="cssselector" cssselector="input[value='finaled']"></FinaledRadioBtn>
+		  <NonPositiveCheckBox by="id" id="hiddenResults"></NonPositiveCheckBox>
+		  <ReportCriteria by="id" id="TemplateCriteriaGrid"></ReportCriteria>
+		  <RunReportButton by="id" id="runReport"></RunReportButton>
+		  <CancelButton by="id" id="cancel"></CancelButton>
+		</Other>
+    </CommonSection>   
+  </HotListRunReportPage>
+  <HotListCreateTemplatePage>
+    <TitleTextBox by="id" id="ReportTemplateName"></TitleTextBox>
+  </HotListCreateTemplatePage>
+  <HotListTemplatePage>
+    <Breadcrumb>
+      <Home by="cssselector" cssselector=".breadcrumb>ul>li>a"></Home>
+    </Breadcrumb>
+    <CriteriaSelection>
+      <BtnAddCriteria by="id" id="btnAddCriteria"></BtnAddCriteria>
+      <SearchCriteria by="id" id="SearchCriteria"></SearchCriteria>
+      <SearchDrugs by="id" id="SearchDrugs"></SearchDrugs>
+      <SearchLocations by="id" id="SearchLocations"></SearchLocations>
+      <SearchLOS by="id" id="SearchLOS"></SearchLOS>
+      <SearchLOSDays by="id" id="SearchLOSDays"></SearchLOSDays>
+      <SearchOrganisms by="id" id="SearchOrganisms"></SearchOrganisms>
+      <SearchSources by="id" id="SearchSources"></SearchSources>
+      <SearchSusceptibilities by="id" id="SearchSusceptibilities"></SearchSusceptibilities>      
+    </CriteriaSelection>
+    <CriteriaGrid>
+      <Column field="Location" data-title="Location" data-field="location"></Column>
+      <Column field="Source" data-title="Source" data-field="source"></Column>
+      <Column field="LOSDays" data-title="LOS (Days)" data-field="length_of_stay_operator"></Column>
+      <Column field="LOS" data-title="length_ of_ stay" data-field="length_of_stay"></Column>
+      <Column field="Organism" data-title="Organism" data-field="organism"></Column>
+      <Column field="Drug" data-title="Drug" data-field="drug"></Column>
+      <Column field="Susc" data-title="Susc" data-field="sensitivity"></Column>
+      <HotListCriteriaGrid by="id" id="HotListCriteriaGrid"></HotListCriteriaGrid>
+      <EditTextBox by="id" id="####"></EditTextBox>
+    </CriteriaGrid>
+    <TemplateOptions>
+      <BtnRunReport by="id" id="btnRunReport"></BtnRunReport>
+      <BtnSaveTemplate by="id" id="btnSaveTemplate"></BtnSaveTemplate>
+      <BtnCancel by="id" id="btnCancel"></BtnCancel>
+      <TemplateStatus by="id" id="template_status"></TemplateStatus>
+      <TemplateStatusMessage by="id" id="template_status_message"></TemplateStatusMessage>
+    </TemplateOptions>
+  </HotListTemplatePage>
+  <KendoPage>
+    <KendoGrid>
+      <PageNavigation>
+        <GridPageInfo by="cssselector" cssselector="span.k-pager-info.k-label"></GridPageInfo>
+        <GridNavFirstPage by="cssselector" cssselector="a[title='Go to the first page']"></GridNavFirstPage>
+        <GridNavLastPage by="cssselector" cssselector="a[title='Go to the last page']"></GridNavLastPage>
+        <GridNavNextPage by="cssselector" cssselector="a[title='Go to the next page']"></GridNavNextPage>
+        <GridNavPreviousPage by="cssselector" cssselector="a[title='Go to the previous page']"></GridNavPreviousPage>
+        <GridNavPageNumber by="cssselector" cssselector="a[data-page='####']"></GridNavPageNumber>
+      </PageNavigation>
+    </KendoGrid>   
+  </KendoPage>
+  <PatternDetailPage>
+    <SidePanel>
+      <SidePanelShow by="classname" classname="RightPanHeader"></SidePanelShow>
+      <ChangeStatusButton by="cssselector" cssselector="button[onclick=' PatternStatusDropDownShowHide(); ']"></ChangeStatusButton>
+      <ChangeStatusDisplay by="id" id="Status"></ChangeStatusDisplay>
+      <ChangeStatusUnpublish by="cssselector" cssselector="div#Status a[data-ajax-begin='return ConfirmStatusChange(1)']"></ChangeStatusUnpublish>
+    </SidePanel>
+  </PatternDetailPage>
+  <PatternGridPage>
+    <KendoGrid>
+		<Columns>
+		  <Column field="Pattern" data-title="Pattern" data-field="PatternTk"></Column>
+		  <Column field="Run Date" data-title="Run Date" data-field="IncidenceDate"></Column>
+		  <Column field="Specimen Source" data-title="Specimen Source" data-field="SpecimenSource"></Column>
+		  <Column field="Organism" data-title="Organism" data-field="Organism"></Column>
+		  <Column field="Resistance" data-title="Resistance" data-field="Resistance"></Column>
+		  <Column field="Locations" data-title="Locations" data-field="Locations"></Column>
+		  <Column field="Onset" data-title="Onset" data-field="Onset"></Column>
+		  <Column field="Type" data-title="Type" data-field="IncidenceName"></Column>
+		  <Column field="Status" data-title="Status" data-field="PatternStatus"></Column>
+		  <Column field="Binder" data-title="Binder" data-field="IsBinded"></Column>
+	  </Columns>
+		<Filters>
+		  <GridFilterDivRunDate by="id" id="dvInnerfilIncidenceDate"></GridFilterDivRunDate>
+		  <GridFilterDivPatternTk by="id" id="dvInnerfilPatternTk"></GridFilterDivPatternTk>
+		  <GridFilterDivSpecimenSource by="id" id="dvInnerfilSpecimenSource"></GridFilterDivSpecimenSource>
+		  <GridFilterDivOrganism by="id" id="dvInnerfilOrganism"></GridFilterDivOrganism>
+		  <GridFilterDivResistance by="id" id="dvInnerfilResistance"></GridFilterDivResistance>
+		  <GridFilterDivLocations by="id" id="dvInnerfilLocations"></GridFilterDivLocations>
+		  <GridFilterDivOnset by="id" id="dvInnerfilOnset"></GridFilterDivOnset>
+		  <GridFilterDivType by="id" id="dvfilIncidenceName"></GridFilterDivType>
+		  <GridFilterDivStatus by="id" id="dvfilPatternStatus"></GridFilterDivStatus>
+		  <GridFilterDivBinder by="id" id="dvInnerfilIsBinded"></GridFilterDivBinder>     
+		  <FilterCheckBoxOption string="input[value='####'][name='####']"></FilterCheckBoxOption>
+		  <FilterApplyBtn by="id" id="apply####"></FilterApplyBtn>
+		  <FilterCancelBtn by="id" id="cancel####"></FilterCancelBtn>
+		  <FilterClearBtn by="id" id="Clear####"></FilterClearBtn>
+		  <FilterSelectAll string="input#checkall####"></FilterSelectAll>
+		</Filters>
+      <Table>
+        <SuggestedActionAreaHidden by="cssselector" cssselector="tr[class='trAdditionalData']"></SuggestedActionAreaHidden>
+        <SuggestedActionAreaVisible by="cssselector" cssselector="td.mgraph"></SuggestedActionAreaVisible>
+        <SuggestedActionArrowUp by="cssselector" cssselector="img[src='Content/Images/icon_arrow_top.png']"></SuggestedActionArrowUp>
+        <SuggestedActionArrowDown by="cssselector" cssselector="img[src='Content/Images/icon_arrow_bot.png']"></SuggestedActionArrowDown>
+        <StatusColumnPublishIcon by="cssselector" cssselector="a[onclick^='UnpublishUnderReview']"></StatusColumnPublishIcon>
+        <PatternColumnPatternTkLink by="cssselector" cssselector="a[href^='pattern/detail/####/####"></PatternColumnPatternTkLink>
+      </Table>
+    </KendoGrid>
+    <TopMenu>
+		<Icons>
+		  <GridPageSizeDropDown by="id" id="GridPageSize"></GridPageSizeDropDown>
+		  <SiteNameDisplayedInMenuBar by="cssselector" cssselector="div#DivPatternGrid div.menuBar div.menuText span"></SiteNameDisplayedInMenuBar>
+		  <ExpandAllBtn by="id" id="btnExpandAll"></ExpandAllBtn>
+		  <SettingsIcon by="cssselector" cssselector="td a[href*='/preferences']"></SettingsIcon>
+		  <ReturnToHomePage by="cssselector" cssselector="a[href='/phoenix/']"></ReturnToHomePage>
+		  <PublishPatternsIcon by="cssselector" cssselector="img[title='Publish UnderReview Patterns']"></PublishPatternsIcon>
+		  <HiddenPatternsIcon by="id" id="imgToggleHiddenPatterns"></HiddenPatternsIcon>
+		</Icons>
+      <Dates>
+        <HiddenFromDate by="id" id="hdnFromDate"></HiddenFromDate>
+        <HiddenToDate by="id" id="hdnToDate"></HiddenToDate>
+        <DatePicker by="id" id="open"></DatePicker>
+        <DatePickerSubmitBtn by="id" id="btnGo"></DatePickerSubmitBtn>
+      </Dates>
+    </TopMenu>     
+  </PatternGridPage>  
+</root>
+  <HotListEditTemplatePage>
+	<Other>
+		<TemplateTitle by="id" id="hotlist_template_title"></TemplateTitle>
+		<DeleteTemplate by="id" id="btnDeleteTemplate"></DeleteTemplate>
+	</Other>
+    <DeleteConfirmation>
+    </DeleteConfirmation>
+  </HotListEditTemplatePage>
+  <HotListReportResultsPage>
+    <Breadcrumb>
+    </Breadcrumb>
+    <ReportGrid>
+      <MenuBar>
+      </MenuBar>
+	  <TemplateCriteriaGrid>
+        </TemplateCriteriaGrid>
+      <KendoGrid>
+      </KendoGrid>
+    </ReportGrid>
+  </HotListReportResultsPage>
+  <HotListRunReportPage>
+	<Window>
+	</Window>
+    <ReportSection>
+    </ReportSection>
+    <CommonSection>
+		<CriteriaGrid>
+        </CriteriaGrid>
+		<Other>
+		</Other>
+    </CommonSection>   
+  </HotListRunReportPage>
+  <HotListCreateTemplatePage>
+    <TitleTextBox by="id" id="ReportTemplateName"></TitleTextBox>
+  </HotListCreateTemplatePage>
+  <HotListTemplatePage>
+    <Breadcrumb>
+    </Breadcrumb>
+    <CriteriaSelection>    
+    </CriteriaSelection>
+    <CriteriaGrid>
+    </CriteriaGrid>
+    <TemplateOptions>
+    </TemplateOptions>
+  </HotListTemplatePage>
+  <KendoPage>
+    <KendoGrid>
+      <PageNavigation>
+      </PageNavigation>
+    </KendoGrid>   
+  </KendoPage>
+  <PatternDetailPage>
+    <SidePanel>
+    </SidePanel>
+  </PatternDetailPage>
+  <PatternGridPage>
+    <KendoGrid>
+		<Columns>
+	  </Columns>
+		<Filters>
+		</Filters>
+      <Table>
+      </Table>
+    </KendoGrid>
+    <TopMenu>
+		<Icons>
+		</Icons>
+      <Dates>
+      </Dates>
+    </TopMenu>     
+  </PatternGridPage>  
+</root>
